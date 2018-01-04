@@ -1,0 +1,37 @@
+---
+layout: default
+title: 'Archive'
+---
+
+<!-- Content -->
+<div class="row">
+
+  {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+
+  <!-- Left Column -->
+  <section class="leftcolumn">
+    <div class="card">
+      {% for yearMonth in postsByYearMonth %}
+        <h3 id="{{ yearMonth.name | slugify }}">{{ yearMonth.name }}</h3>
+        <ul class="links">
+          {% for post in yearMonth.items %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <span class="date">{{ post.date | date_to_string }}</span></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Right Column -->
+  <section class="rightcolumn">
+    <div class="card">
+      <ul class="links">
+        {% for yearMonth in postsByYearMonth %}
+          <li><a href="#{{ yearMonth.name | slugify }}">{{ yearMonth.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+</div>

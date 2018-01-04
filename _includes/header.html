@@ -1,0 +1,25 @@
+<!-- Header -->
+<header>
+  <img src="{{ site.baseurl }}/public/img/icon.png" alt="" /><h1>{{ site.title }}</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <ul class="menu">
+    <li>
+      <a {% if page.title == 'Blog' %}class="active"{% endif %} href="{{ site.baseurl }}/">Blog</a>
+      <ul class="menu submenu">
+        <li><a {% if page.title == 'Tags' %}class="active"{% endif %} href="{{ site.baseurl }}/tags/">Tags</a></li>
+        <li><a {% if page.title == 'Archive' %}class="active"{% endif %} href="{{ site.baseurl }}/archive/">Archive</a></li>
+      </ul>
+    </li>
+    <li><a {% if page.title == 'Resume' %}class="active"{% endif %} href="{{ site.baseurl }}/resume/">Resume</a></li>
+    <li><a {% if page.title == 'About' %}class="active"{% endif %} href="{{ site.baseurl }}/about/">About</a></li>
+
+    <li style="float: right;">
+      <a href="http://github.com/michaelkent94/michaelkent94.github.io">
+        <i class="fa fa-github"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,20 @@
+---
+layout: standard
+title: 'Tags'
+---
+
+<section class="card">
+  {% for tag in site.tags %}
+    <a class="tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+  {% endfor %}
+  <br /><br />
+  {% for tag in site.tags %}
+    <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+    <ul class="links">
+      {% for post in tag[1] %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <span class="date">{{ post.date | date_to_string }}</span></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</section>

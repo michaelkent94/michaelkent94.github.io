@@ -1,0 +1,50 @@
+.resume-item {
+  margin-bottom: 20px;
+
+  .resume-item-heading {
+    color: mediumseagreen;
+
+    .resume-item-title {
+      display: block;
+      float: left;
+      margin-bottom: 10px;
+
+      .resume-item-subtitle {
+        display: inline;
+        color: rgba(mediumseagreen, 0.5);
+      }
+    }
+
+    .resume-item-date {
+      display: block;
+      float: right;
+    }
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.bar {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+
+  & > span {
+    background-color: deepskyblue;
+    color: white;
+    text-shadow: 0 0 2px black;
+    display: block;
+    text-indent: 4px;
+    line-height: 30px;
+    font-weight: bold;
+    overflow: visible;
+    white-space: nowrap;
+  }
+}

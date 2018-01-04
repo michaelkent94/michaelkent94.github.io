@@ -1,0 +1,51 @@
+article {
+  &.card {
+    border-top: none;
+    border-left: solid 10px deepskyblue;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .more {
+    text-align: right;
+  }
+}
+
+.post-heading {
+  margin: 0 0 40px 0;
+}
+
+.date {
+  display: inline-block;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba(mediumseagreen, 0.15);
+  padding: 4px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+
+  &::before {
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: 10px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: mediumseagreen;
+    color: white;
+  }
+}
+
+#excerpt-end {
+  display: hidden;
+  position: relative;
+  top: -200px;
+}
